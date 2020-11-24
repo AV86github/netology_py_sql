@@ -24,8 +24,7 @@ create table if not exists muz_albums (
 	ID serial primary key,
 	NAME varchar(100) not null,
 	rate integer check(rate > 0),
-	year integer check (year > 1900 and year < 2100),
-	artist_id integer references muz_artists(id)
+	year integer check (year > 1900 and year < 2100)
 );
 
 create table if not exists MUZ_ART_ALBUM (
